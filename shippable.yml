@@ -6,9 +6,9 @@ compiler:
 
 matrix:
   - exclude:
-    - compiler: gcc
+    - compiler: "gcc"
   - allow_failures:
-    - compiler: clang
+    - compiler: "clang"
     
 
 build:
