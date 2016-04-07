@@ -1,4 +1,8 @@
-language: none
+language: c
+
+compiler:
+  - gcc
+  - clang
 
 build:
   pre_ci:
