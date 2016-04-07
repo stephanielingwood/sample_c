@@ -23,11 +23,11 @@ matrix:
 build:
   pre_ci:
     - echo 'true'
+    - ls -la ../idontexist
 
   ci:
     - ./configure && make && make install
     - ./hello
-    - echo $NONEXISTANT
 
   post_ci:
     - echo "true"
