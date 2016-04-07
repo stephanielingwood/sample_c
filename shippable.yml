@@ -12,13 +12,13 @@ matrix:
     
 
 
-matrix:
-  include:
-    - python: 3.2
-  exclude:
-    - python: 2.7
-  allow_failures:
-    - compiler: "gcc"
+# matrix:
+#   include:
+#     - python: 3.2
+#   exclude:
+#     - python: 2.7
+#   allow_failures:
+#     - compiler: "gcc"
 
 build:
   pre_ci:
