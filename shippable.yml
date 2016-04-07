@@ -5,11 +5,20 @@ compiler:
   - clang
 
 matrix:
-  - exclude:
-    - compiler: "gcc"
-  - allow_failures:
-    - compiler: "clang"
+  exclude:
+    - compiler: gcc
+  allow_failures:
+    - compiler: clang
     
+
+
+matrix:
+  include:
+    - python: 3.2
+  exclude:
+    - python: 2.7
+  allow_failures:
+    - compiler: "gcc"
 
 build:
   pre_ci:
