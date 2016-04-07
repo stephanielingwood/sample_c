@@ -4,6 +4,13 @@ compiler:
   - gcc
   - clang
 
+matrix:
+  - exclude:
+    - compiler: gcc
+  - allow_failures:
+    - compiler: clang
+    
+
 build:
   pre_ci:
     - echo 'true'
@@ -11,6 +18,7 @@ build:
   ci:
     - ./configure && make && make install
     - ./hello
+    - echo $NONEXISTANT
 
   post_ci:
     - echo "true"
